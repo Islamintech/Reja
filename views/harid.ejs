@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reja va Maqsadlar</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    body {
+      background-color: #b8bbd1;
+    }
+
+    .card {
+      border-radius: 20px;
+    }
+
+    .btn-rounded {
+      border-radius: 20px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .form-control {
+      border-radius: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container py-5">
+    <h1 class="display-5 text-center fw-bold mb-4">
+      REJA VA MAQSADLAR
+    </h1>
+
+    <div class="card shadow-sm p-4 mx-auto" style="max-width: 600px;">
+      <form id="create-form" action="/create" method="POST">
+        <div class="input-group">
+          <input
+            id="create-field"
+            name="item"
+            type="text"
+            class="form-control"
+            placeholder="Yangi reja yoki maqsad yozing..."
+            autofocus
+            autocomplete="off"
+          >
+
+          <button
+            class="btn btn-primary btn-rounded"
+            type="submit"
+          >
+            Qo‘shish
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
