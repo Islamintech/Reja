@@ -2,7 +2,6 @@ console.log("Web server boshlash");
 const express = require('express');
 const app = express();
 const http = require('http');
-const { userInfo } = require('os');
 const fs = require("fs");
 
 let user;
@@ -26,18 +25,15 @@ app.set("views", "views");
 app.set("view engine", "ejs"); 
 
 //4 Routing code
+
+app.get("/author", function(req, res){
+    res.render("author", {user: user});
+});
+
 app.get("/", function(req, res){
     res.render("harid")
 })
 
-app.get("/author", function(req, res){
-    res.render("author", {user: user});
-})
-
-app.post("/create", (req, res) => {
-    console.log(req.body);
-    res.json({test:"success"});
-})
 
 const server = http.createServer(app);
 const PORT = 3000;
