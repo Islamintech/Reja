@@ -1,28 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/main.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/main.css" />
+
+  <title>Portfolio</title>
 </head>
+
 <body>
-    <div class="frame">
-        <div class="main_frame">
-            <div class="left_frame"></div>
-            <div class="middle_frame"></div>
-            <div class="right_frame">
-                <div class="btn_right"><img src="" alt=""></div>
-                <div class="btn_right"><img src="/Reja/public/author/btn_icon/home.svg" alt=""></div>
-                <div class="btn_right"><img src="/Reja/public/author/btn_icon/service.svg" alt=""></div>
-                <div class="btn_right"><img src="/Reja/public/author/btn_icon/education.svg" alt=""></div>
-                <div class="btn_right"><img src="/Reja/public/author/btn_icon/portfolio.svg" alt=""></div>
-                <div class="btn_right"><img src="/Reja/public/author/btn_icon/blog.svg" alt=""></div>
-                <div class="btn_right"><img src="/Reja/public/author/btn_icon/contact.svg" alt=""></div>
+  <div class="frame">
+    <div class="main_frame">
+
+      <!-- LEFT FRAME -->
+      <div class="left_frame">
+
+        <!-- PROFILE -->
+        <div class="left_1">
+          <div class="img_section">
+            <img src="images/profile.jpg" alt="avatar" />
+          </div>
+
+          <div class="left_1-1"><%= user.name %></div>
+          <div class="left_1-2"><%= user.profession %></div>
+
+          <div class="icon_left">
+            <span class="icon_bg"><img src="btn_icon/instagram.svg" alt="Instagram" /></span>
+            <span class="icon_bg"><img src="btn_icon/facebook.svg" alt="Facebook" /></span>
+            <span class="icon_bg"><img src="btn_icon/twitter.svg" alt="Twitter" /></span>
+            <span class="icon_bg"><img src="btn_icon/youtube.svg" alt="YouTube" /></span>
+            <span class="icon_bg"><img src="btn_icon/linkedin.svg" alt="LinkedIn" /></span>
+            <span class="icon_bg"><img src="btn_icon/dribble.svg" alt="Dribbble" /></span>
+          </div>
+        </div>
+
+        <div class="marginer_1"></div>
+
+        <!-- INFO -->
+        <div class="left_2">
+          <div class="info_row">
+            <p>Age:</p>
+            <span><%= user.age %></span>
+          </div>
+
+          <div class="info_row">
+            <p>Residence:</p>
+            <span><%= user.residence %></span>
+          </div>
+
+          <div class="info_row">
+            <p>Freelance:</p>
+            <span class="available"><%= user.freelance %></span>
+          </div>
+
+          <div class="info_row">
+            <p>Address:</p>
+            <span><%= user.adress %></span>
+          </div>
+        </div>
+
+        <div class="marginer_2"></div>
+
+        <!-- LANGUAGES -->
+        <div class="left_3">
+          <p>Languages</p>
+
+          <div class="lang">
+            <div class="lang_head">
+              <span><%= user.languages[0] %></span>
+              <span class="lang_percent">100%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <div class="lang">
+            <div class="lang_head">
+              <span><%= user.languages[1] %></span>
+              <span class="lang_percent">90%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="lang">
+            <div class="lang_head">
+              <span><%= user.languages[2] %></span>
+              <span class="lang_percent">60%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 60%;"></div>
+            </div>
+          </div>
+
+          <div class="lang">
+            <div class="lang_head">
+              <span><%= user.languages[3] %></span>
+              <span class="lang_percent">30%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 30%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="marginer_3"></div>
+
+        <!-- SKILLS -->
+        <div class="left_4">
+          <p>Skills</p>
+
+          <div class="skills">
+            <div class="skills_head">
+              <span><%= user.skills[0] %></span>
+              <span class="skill_percent">90%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skills_head">
+              <span><%= user.skills[1] %></span>
+              <span class="skill_percent">80%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skills_head">
+              <span><%= user.skills[2] %></span>
+              <span class="skill_percent">70%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 70%;"></div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skills_head">
+              <span><%= user.skills[3] %></span>
+              <span class="skill_percent">60%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 60%;"></div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skills_head">
+              <span><%= user.skills[4] %></span>
+              <span class="skill_percent">50%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 50%;"></div>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skills_head">
+              <span><%= user.skills[5] %></span>
+              <span class="skill_percent">40%</span>
+            </div>
+            <div class="score">
+              <div class="score_bar" style="width: 40%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="marginer_4"></div>
+
+        <div class="left_5">
+            <p>Extra Skills</p>
+            <div class="extra_Icon">
+                <span class="extra_bg"><img src="btn_icon/extraSkill.svg" alt="Extra" /></span>
+                <%=user.extra_skills[0]%></br>
+                <span class="extra_bg"><img src="btn_icon/extraSkill.svg" alt="Extra" /></span>
+                <%=user.extra_skills[1]%></br>
+                <span class="extra_bg"><img src="btn_icon/extraSkill.svg" alt="Extra" /></span>
+                <%=user.extra_skills[2]%></br>
+                <span class="extra_bg"><img src="btn_icon/extraSkill.svg" alt="Extra" /></span>
+                <%=user.extra_skills[3]%></br>
             </div>
         </div>
+        <div class="marginer_5"></div>
+
+
+
+      </div>
+
+      <!-- MIDDLE FRAME -->
+      <div class="middle_frame"></div>
+
+      <!-- RIGHT FRAME -->
+      <div class="right_frame">
+        <div class="btn_contrast">
+          <img src="btn_icon/Contrast.svg" alt="Contrast" />
+        </div>
+
+        <div class="btn_right"><img src="btn_icon/Home.svg" alt="Home" /></div>
+        <div class="btn_right"><img src="btn_icon/Services.svg" alt="Services" /></div>
+        <div class="btn_right"><img src="btn_icon/cv.svg" alt="CV" /></div>
+        <div class="btn_right"><img src="btn_icon/Portfolio.svg" alt="Portfolio" /></div>
+        <div class="btn_right"><img src="btn_icon/blog.svg" alt="Blog" /></div>
+        <div class="btn_right"><img src="btn_icon/contact.svg" alt="Contact" /></div>
+      </div>
+
     </div>
+  </div>
 </body>
 </html>

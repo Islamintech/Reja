@@ -3,7 +3,8 @@
   "profession": "Software Engineer",
   "age": 21,
   "residence": "South Korea",
-  "adress": "South Korea, Seoul",
+  "freelance": "Available",
+  "adress": "Seoul, South Korea",
   "languages": ["Uzbek", "English", "Korean", "Russian"],
   "skills": ["HTML", "CSS", "JS", "NodeJS", "Python", "JAVA"],
   "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
@@ -36,5 +37,5 @@
     "9$"
   ],
   "famous_words": ["World is Beautiful with Flowers"],
-  "famous _name": ["Muhammad Adam"]
+  "famous _name": ["Islam"]
 }

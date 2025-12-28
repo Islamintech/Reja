@@ -25,12 +25,15 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 ROUTING CODES
-app.get("/author", (req, res) => {
-  res.render("author.ejs", { user: user });
-});
+
 app.get("/", function (req, res) {
   res.render("harid");
 });
+
+app.get("/author", (req, res) => {
+  res.render("author.ejs", { user: user });
+});
+
 
 const server = http.createServer(app);
 let PORT = 3000;
