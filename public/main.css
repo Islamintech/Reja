@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color:bisque;
 }
 
 .main_frame{
@@ -15,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     margin-top: 2px;
-    background-color: yellow;
+    background-color: #E5E5E5;
 }
 
 .left_frame{
@@ -23,26 +22,52 @@
     width: 305px;
     height: 1315px;
     left: 0px;
-    top: 0px;
-    background-color: green;
+    top: 1px;
+    background-color: #FFFFFF;
+}
+
+.btn_contrast{
+    height: 30px;
+    width: 30px;
+    background-color: red;
 }
 
 .middle_frame{
     position: absolute;
-    width: 971px;
+    width: 805px;
     height: 463.09px;
-    left: 339px;
-    top: 3px;
-    background-color: blue;
+    top: 2px;
+    left: 320px;
+    background-color: #FFFFFF;
 }
 
 .right_frame{
     position: absolute;
     width: 108px;
     height: 1315px;
-    left: 1332px;
-    top: 0px;
-    background-color: orange;
+    left: 1141px;
+    top: 1px;
+    background-color: #D9D9D9;
 }
 
+
+
+.btn_contrast,
+.btn_right {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_contrast img,
+.btn_right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  /* force light color for dark backgrounds */
+  filter: brightness(0) invert(1);
+}
 
