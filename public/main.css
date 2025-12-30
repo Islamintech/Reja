@@ -254,6 +254,55 @@
   background-color: #FFFFFF;
 }
 
+.work{
+  /* Doctor neurologists in OHSU Hospital */
+
+position: absolute;
+width: 499.51px;
+height: 116.74px;
+left: 100px;
+top: 102.15px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 123.6%;
+/* or 59px */
+
+/* Black */
+color: #2B2B2B;
+
+
+}
+
+.service_des{
+  /* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus. */
+
+position: absolute;
+width: 424.44px;
+height: 85.61px;
+left: 100px;
+top: 236px;
+
+/* H6 - 16px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-transform: capitalize;
+font-feature-settings: 'calt' off, 'kern' off;
+
+/* Paragraph Font */
+color: #767676;
+
+
+}
+
+
+
 /* ===== RIGHT SIDEBAR ===== */
 .right_frame {
   position: absolute;
@@ -279,3 +328,4 @@
   align-items: center;
   justify-content: center;
 }
+
