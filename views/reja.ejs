@@ -14,17 +14,14 @@
     body {
       background-color: #b8bbd1;
     }
-
     .card {
       border-radius: 20px;
     }
-
     .btn-rounded {
       border-radius: 20px;
       padding-left: 24px;
       padding-right: 24px;
     }
-
     .form-control {
       border-radius: 14px;
     }
@@ -35,11 +32,11 @@
 
   <div class="container py-5">
     <h1 class="display-5 text-center fw-bold mb-4">
-      REJA VA MAQSADLAR
+      Plans for today
     </h1>
 
     <div class="card shadow-sm p-4 mx-auto" style="max-width: 600px;">
-      <form id="create-form" action="/create" method="POST">
+      <form id="create-form" action="/create-item" method="POST">
         <div class="input-group">
           <input
             id="create-field"
@@ -51,16 +48,10 @@
             autocomplete="off"
           >
 
-          <button
-            class="btn btn-primary btn-rounded"
-            type="submit"
-          >
-            Qo‘shish
+          <button class="btn btn-primary btn-rounded" type="submit">
+            Add
           </button>
         </div>
       </form>
-    </div>
-  </div>
-
 </body>
 </html>
