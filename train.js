@@ -1,14 +1,14 @@
 //TASK B
-// function countDigit(a){
-//     let count = 0;
-//     for(let char of a){
-//         if(char >= '0' && char <= '9'){
-//             count ++;
-//         }
-//     }
-//     return count;
-// }
-// console.log(countDigit("ad2a54y79wet0sfgb9"));
+function countDigit(a){
+    let count = 0;
+    for(let char of a){
+        if(char >= '0' && char <= '9'){
+            count ++;
+        }
+    }
+    return count;
+}
+console.log(countDigit("ad2a54y79wet0sfgb9"));
 
 
 

@@ -22,12 +22,30 @@ app.set("view engine", "ejs");
 
 //4 ROUTING CODES
 app.get("/", function (req, res) {
-  res.render("reja");
+  console.log("user entered to here /")
+  db.collection("plans").find().toArray((err, data)=>{
+    if(err) {
+      console.log(err);
+      res.end("something went wrong!");
+    }else{
+      console.log(data);
+      res.render("reja", {items: data})
+    }
+  });
 });
 
 app.post("/create-item", (req, res)=>{
+  console.log("user entered here to /create-item")
   console.log(req.body);
-  res.end("Success")
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({reja: new_reja}, (err, data)=>{
+    if(err){
+      console.log(err);
+      res.end('Something went worng!');
+    }else{
+      res.end("successfully added");
+    }
+  })
 })
 
 module.exports = app;
