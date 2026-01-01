@@ -5,7 +5,7 @@ const app = express();
 
 
 //Calling MongoDB
-const db = require("./server");
+const db = require("./server").db();
 
 
 //1 KIRISH CODE
