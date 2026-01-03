@@ -1,4 +1,20 @@
-//TASK C 
+//MITTASK 
+
+/*
+MITASK-C 
+Shunday class tuzing tuzing nomi Shop, va uni constructoriga 
+3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, 
+biri qoldiq, biri sotish va biri qabul. Har bir method ishga 
+tushgan vaqt ham log qilinsin.
+MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() 
+return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & 
+shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 
+5ta lagmon va 6ta cola mavjud!
+@MITASK
+*/
+
+//TASK C
+/*Masalana yechimi:*/
 const moment = require("moment") 
 
 class Shop{
@@ -37,21 +53,10 @@ class Shop{
     }
 }
 const shop = new Shop (4, 5, 2);
-shop.sotish("non", 5);
 console.log(shop.qoldiq());
-shop.sotish("lagmon", 4);
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
 console.log(shop.qoldiq());
-shop.sotish("cola", 2);
-console.log(shop.qoldiq());
-shop.sotish("cola", 5);
-shop.qabul("cola", 100);
-
-
-
-
-
-
-
 
 //TASK B
 // function countDigit(a){
