@@ -32,3 +32,25 @@ document
             console.log("Please try again")
         });
 })
+
+document.addEventListener("click", function(e){
+    //delete operation
+    if(e.target.classList.contains("delete-me")){
+        if(confirm("Do you really wanna delete?")){
+            axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove();
+            })
+            .catch((err) => {
+                console.log("Please try again")
+            });
+        }
+    }
+
+
+    //edit operation
+    if(e.target.classList.contains("edit-me")){
+        alert("You have pressed the edit button")
+    }
+})

@@ -6,6 +6,7 @@ const app = express();
 
 //Calling MongoDB
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 
 //1 KIRISH CODE
@@ -32,6 +33,14 @@ app.get("/", function (req, res) {
       res.render("reja", {items: data})
     }
   });
+});
+
+app.post("/delete-item", (req, res)=>{
+  const id = req.body.id;
+  db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, 
+  function(err, data){
+    res.json({state: "success"});
+  })
 });
 
 app.post("/create-item", (req, res)=>{
