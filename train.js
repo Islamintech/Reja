@@ -1,4 +1,53 @@
 //MITTASK 
+/*TASK D
+Shunday function tuzing, u 2ta string parametr ega bolsin, 
+hamda agar har ikkala string bir hil harflardan 
+iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+//Solution 
+function wordComparing(a, b){
+    if(a.length !== b.length){
+        return false
+    }else if(a.split("").sort().join("") === b.split("").sort().join("")){
+        return true
+    }else{
+        return false
+    }
+}
+
+console.log(wordComparing("mitgroup", "gmtiprou"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 MITASK-C 
@@ -11,52 +60,53 @@ return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 
 shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 
 5ta lagmon va 6ta cola mavjud!
 @MITASK
-*/
+
 
 //TASK C
-/*Masalana yechimi:*/
-const moment = require("moment") 
+/*Masalana yechimi:
+// const moment = require("moment") 
+// const time = moment().format("hh:mm a");
 
-class Shop{
-    products = ["lagmon", "non", "cola"];
+// class Shop{
+//     products = ["lagmon", "non", "cola"];
 
-    constructor(lagmon, non, cola){
-        this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
-    }
+//     constructor(lagmon, non, cola){
+//         this.non = non; // =5 
+//         this.lagmon = lagmon;
+//         this.cola = cola;
+//     }
 
-    qabul(mahsulot, miqdor){
-        if(!this.products.includes(mahsulot) || miqdor <= 0){
-            console.log("Iltimos to'g'ri mahsulot va miqdorni kiriting")
-            return;
-        }
-        this[mahsulot] += miqdor;
-        console.log(`Dokonimizga ${moment().format("HH:mm")} da, ${miqdor} ta ${mahsulot} qabul qilindi`);
-    }
+//     qabul(mahsulot, miqdor){
+//         if(!this.products.includes(mahsulot) || miqdor <= 0){
+//             console.log("Iltimos to'g'ri mahsulot va miqdorni kiriting")
+//             return;
+//         }
+//         this[mahsulot] += miqdor;
+//         console.log(`Dokonimizga ${time} da, ${miqdor} ta ${mahsulot} qabul qilindi`);
+//     }
 
-    sotish(mahsulot, miqdor){
-        if(!this.products.includes(mahsulot)){
-            console.log("Bunday mahsulot mavjud emas");
-        }else if(miqdor <= 0){
-            console.log("Miqdor noto'g'ri")
-        }else if(this[mahsulot]<miqdor){
-            console.log(`Hozir ${this[mahsulot]} ta ${mahsulot} mavjud`)
-        }else{
-            this[mahsulot] -= miqdor;
-            console.log(`Do'konimizdan  ${moment().format("HH:mm")} da, ${miqdor} ta ${mahsulot} sotildi.`);
-        }
-    }
+//     sotish(mahsulot, miqdor){
+//         if(!this.products.includes(mahsulot)){
+//             console.log("Bunday mahsulot mavjud emas");
+//         }else if(miqdor <= 0){
+//             console.log("Miqdor noto'g'ri")
+//         }else if(this[mahsulot]<miqdor){
+//             console.log(`Hozir ${time} ${this[mahsulot]} ta ${mahsulot} mavjud`)
+//         }else{
+//             this[mahsulot] -= miqdor;
+//             console.log(`Do'konimizdan  ${time} da, ${miqdor} ta ${mahsulot} sotildi.`);
+//         }
+//     }
 
-    qoldiq(){
-        return `Dokonomizda ${moment().format("HH:mm")} vaqt bo'yicha ${this.non} ta non, ${this.cola} ta cola va ${this.lagmon} ta lagmon mavjud`;
-    }
-}
-const shop = new Shop (4, 5, 2);
-console.log(shop.qoldiq());
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-console.log(shop.qoldiq());
+//     qoldiq(){
+//         return `Dokonomizda ${time} vaqt bo'yicha ${this.non} ta non, ${this.cola} ta cola va ${this.lagmon} ta lagmon mavjud`;
+//     }
+// }
+// const shop = new Shop (4, 5, 2);
+// console.log(shop.qoldiq());
+// shop.sotish("non", 5);
+// shop.qabul("cola", 4);
+// console.log(shop.qoldiq());
 
 //TASK B
 // function countDigit(a){
@@ -69,7 +119,7 @@ console.log(shop.qoldiq());
 //     return count;
 // }
 // console.log(countDigit("ad2a54y79wet0sfgb9"));
-
+*/
 
 
 
