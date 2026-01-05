@@ -62,12 +62,10 @@
    
 
     <div class="mx-auto mt-4" style="max-width: 600px;">
-      <ul id="item-list" class="list-group pb-5">
+      <ul id="item-list" class="list-group mb-0">
         <% items.map(function(item){ %>
-             <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
-          <span class="item-text">
-            <%=item.reja%>
-          </span>
+          <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+          <span class="item-text"><%=item.reja%></span>
           <div>
             <button data-id="<%=item._id%>" class="edit-me btn btn-secondary btn-sm me-1">
               Edit
@@ -80,8 +78,14 @@
          <% }) %>
       </ul>
     </div>
-
   </div>
+
+  <div class="mx-auto mt-3 text-center" style="max-width: 600px;">
+  <button id="clean-all" class="btn btn-danger btn-rounded">
+    Delete All
+  </button>
+</div>
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="/browser.js"></script>
 </body>

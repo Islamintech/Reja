@@ -1,4 +1,5 @@
 
+
 function itemTemplate(item){
     return `<li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
           <span class="item-text">
@@ -51,6 +52,29 @@ document.addEventListener("click", function(e){
 
     //edit operation
     if(e.target.classList.contains("edit-me")){
-        alert("You have pressed the edit button")
+        let userInput = prompt(
+            "Do you wanna edit?", 
+            e.target.parentElement.parentElement.querySelector(".item-text").innerHTML);
+    if(userInput){
+        axios
+        .post("/edit-item", {
+            id: e.target.getAttribute("data-id"), 
+            new_input: userInput,
+        })
+        .then(response => {
+            console.log(response.data);
+            e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
+        })
+        .catch(err => {
+            console.log("Please try again");
+        })
     }
+    }
+})
+
+document.getElementById("clean-all").addEventListener("click", function(){
+    axios.post("/delete-all", { delete_all: true}).then(response=>{
+        alert(response.data.state);
+        document.location.reload();
+    }).catch()
 })

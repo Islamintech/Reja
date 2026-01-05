@@ -43,6 +43,24 @@ app.post("/delete-item", (req, res)=>{
   })
 });
 
+app.post("/delete-all", (req, res)=>{
+  if(req.body.delete_all){
+    db.collection("plans").deleteMany(function(){
+      res.json({state: "All plans have been deleted"})
+    });
+  }
+})
+
+app.post("/edit-item", (req, res)=>{
+  const data = req.body;
+  db.collection("plans").findOneAndUpdate(
+    {_id: new mongodb.ObjectId(data.id)},
+    {$set: {reja: data.new_input} },
+function(err, data){
+  res.json({state: "success"});
+})
+});
+
 app.post("/create-item", (req, res)=>{
   console.log("user entered here to /create-item")
   const new_reja = req.body.reja;
