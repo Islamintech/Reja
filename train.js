@@ -9,7 +9,7 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 //Solution 
 function wordComparing(a, b){
     if(a.length !== b.length){
-        return false
+        return falsez
     }else if(a.split("").sort().join("") === b.split("").sort().join("")){
         return true
     }else{
