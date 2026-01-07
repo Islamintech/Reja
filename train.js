@@ -1,4 +1,21 @@
 //MITTASK 
+
+/*TASK E:
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+*/
+
+//Solution:
+
+function getReverse(a){
+    const reversed = a.split("").reverse().join("");
+    return reversed;
+}
+
+console.log(getReverse("hello"));
+
+
+
 /*TASK D
 Shunday function tuzing, u 2ta string parametr ega bolsin, 
 hamda agar har ikkala string bir hil harflardan 
@@ -7,46 +24,17 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
 //Solution 
-function wordComparing(a, b){
-    if(a.length !== b.length){
-        return falsez
-    }else if(a.split("").sort().join("") === b.split("").sort().join("")){
-        return true
-    }else{
-        return false
-    }
-}
+// function wordComparing(a, b){
+//     if(a.length !== b.length){
+//         return falsez
+//     }else if(a.split("").sort().join("") === b.split("").sort().join("")){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
 
-console.log(wordComparing("mitgroup", "gmtiprou"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(wordComparing("mitgroup", "gmtiprou"));
 
 
 /*
